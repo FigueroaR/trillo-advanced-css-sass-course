@@ -36,18 +36,18 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
   animation: moveInRight 3s ease-out ;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -60,7 +60,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   text-transform: uppercase;
   display: block;
   font-size: 6rem;
@@ -73,7 +73,7 @@ body {
   /* animation-delay: 3s; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   color: #fff;
   display: block;
   font-size: 2rem;
@@ -150,7 +150,7 @@ body {
   /* ^ x, y blur color trasnparent with 20% shadow*/
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -177,7 +177,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated{
+.btn--animated{
   animation: moveInBottom 2s ease-out .75s;
   animation-fill-mode: backwards;
 }

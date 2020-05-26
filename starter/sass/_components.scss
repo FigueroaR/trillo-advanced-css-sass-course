@@ -151,18 +151,69 @@
 
 
 .side-nav {
+  font-size: 1.4rem;
+  list-style: none; // take the dots out of the li
+  margin-top: 3.5rem;
+
   &__item {
+    position: relative; // for children positioning 
+
+
+    // everything exept
+    &:not(:last-child) {
+      margin-bottom: .5rem;
+    }
 
   }
 
-  &__link {
-    
+  &__item::before {
+    content: "";
+    position: absolute;  //absolute position / parent is &__item // this is postion in relation (relative) to its parent
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);  
+    transform: scaleY(0); // we hide it before hand
+    transition: transform .2s,
+                width .4s cubic-bezier(.79,.29,.34,1.33) .2s,; // for with .4s but after a .2s delay// https://cubic-bezier.com/#.79,.29,.34,1.33
+                background-color: .1s; //background-color gets animated
   }
 
+  // ::here we make the &__item::before ^^^ only work/appear when we hover
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1); // on hover it shows, it starts in the middle and starts growing in the y direction
+    width: 100%;
+  }
+
+  &__item:active::before {
+    background-color: var(--color-primary-light);
+
+  }
+
+  // :link & :visited pseudo classes
+  &__link:link, 
+  &__link:visited {
+    color: var(--color-grey-light-1);
+    text-decoration: none; //takes away the line below text
+    text-transform: uppercase; // capital letters 
+    display: block;
+    padding: 1.5rem 3rem;
+
+    position: relative; // z index only works if we have a specified position
+    z-index: 10;
+
+    // we canter our svg/icons and text with these 2 lines of code
+    display: flex;
+    align-items: center;
+  }
 
   &__icon {
     width: 1.75rem;
     height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; // color of the current element or parent // var(--color-grey-light-1);
   }
 
 

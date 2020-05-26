@@ -2,7 +2,7 @@
 // LOGO
 .logo {
   height: 3.25rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 
@@ -75,32 +75,70 @@
 //USER MAVIGATTION
 
 .user-nav {
-  background-color: green;
-  
-  &__icon-box {
+  align-self: stretch; // strech overwritye the parent and makes its hover expand the entire heigh or its allow space (parent permit)
 
+  //we nest our flex here (flex item becomace a flex parent also and has children)
+  display: flex; // this will help us keep track of the children, better orginization, naturally is will display in out main axis
+  align-items: center; //this will align item on our cross axis (y axis)
+
+  // user nav and all direct children
+  & > * {
+    // padding creates space between user nav (saved chat and user pic)
+    padding: 0 2rem; //top/bottom  left/right
+    cursor: pointer;
+    height: 100%; // this works in conjuction with align-self: stretch;
+    display: flex;
+    align-items: center; //aligns in cross axis(y axis) // 3rd level of containers
+  }
+
+  // user nav and all direct children but on hover
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
+
+
+  &__icon-box {
+    position: relative;
   }
 
   &__icon {
     height: 2.5rem ;
     width: 2.5rem;
+    fill: var(--color-grey-dark-2);
+    
   }
 
   &__notification {
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius:100px;
+    // border-radius: 50%; // old brosers might look funny with this / mine works fine
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute; // its parent (icon, but we have to use icon-box/parent of icon because icon is an svg) has a position of relative, in order for us to move this children to its formal position
+    top: 1.5rem ;
+    right: 1.1rem;
+
+    //  user flexbox to work with elements inside our span/text 4th level of flex
+    display: flex;
+    justify-content: center; //main axis (x)
+    align-items: center; //cross axis (y)
 
   }
 
-  &__user {
+  // &__user {
 
-  }
+  // }
 
   &__user-photo {
     height: 3.75rem;
     border-radius: 50%;
+    margin-right: 1.1rem; // some space between the pic and name
   }
 
-  &__user-name {
-    
-  }
+  // &__user-name {
+    //nothing here 
+  // }
 
 }

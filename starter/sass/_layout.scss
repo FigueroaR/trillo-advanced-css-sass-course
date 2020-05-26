@@ -7,9 +7,15 @@
 }
 
 .header{
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #fff; // means white
   border-bottom: var(--color-grey-light-2);
+
+
+  display: flex; // we set the flex for the children to behave how we want it
+  justify-content: space-between; // this equally divied the space between the children of this parent element, pushes all off them to an extreme of side
+  align-items: center; // we ake the item cenetered on their x or y coordinate
 }
 
 .content {

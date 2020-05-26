@@ -26,10 +26,18 @@
 .sidebar {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 16%; //no growth if there is space, no shrink if there is no enough space, and basis alyways at 18%
+
+  display: flex; //makes it into a flex container
+  flex-direction: column; //top to bottom or cross axis (y axis)
+  justify-content: space-between; // creates space between and spread items to extreme ends, good in this case 
 }
 
 .hotel-view {
   background-color: #fff; // means white
+
+  //testing
   background-color: blue;
+  height: 80rem;
+
   flex: 1; // so here we allow this element to grow as much as it can (full up its parent, so this comes after the side bar)
 } 

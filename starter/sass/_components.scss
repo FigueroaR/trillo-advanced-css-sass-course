@@ -230,3 +230,64 @@
   text-align: center;
   padding: 2.5rem;
 }
+
+
+
+
+///////////////////////////////////////////////////////
+/// GALLERY
+
+.gallery {
+
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+
+  }
+
+}
+
+
+
+
+///////////////////////////////////////////////////////
+/// OVERVIEW
+
+
+.overview {
+  display: flex;
+  
+  &__heading {
+
+  }
+
+  &__stars {
+    //flex: 1; // we are telling the stars to occupy all the space it can, giving us a cool visiaul by seprating the rest of the item to its right at the end, but it is not ideal, so we use margin-right: auto;
+    margin-right: auto;
+  }
+
+
+  &__icon-star, &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+    
+  }
+
+  &__rating {
+
+  }
+
+  &__rating-average {
+
+  }
+
+  &__rating-count {
+
+  }
+}

@@ -1,0 +1,29 @@
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: --shadow-dark; // look at base for infor
+  min-height: 50rem;
+}
+
+.header{
+  height: 7rem;
+  background-color: #fff; // means white
+  border-bottom: var(--color-grey-light-2);
+}
+
+.content {
+  display: flex; // here we start flex property, and it makes its vhildren elements into boxes, and we will have our 
+  // .sidebar and and .hotel-view properties side by side (this 'content' is the parent)
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 16%; //no growth if there is space, no shrink if there is no enough space, and basis alyways at 18%
+}
+
+.hotel-view {
+  background-color: #fff; // means white
+  background-color: blue;
+  flex: 1; // so here we allow this element to grow as much as it can (full up its parent, so this comes after the side bar)
+} 

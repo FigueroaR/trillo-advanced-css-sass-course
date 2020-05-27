@@ -365,3 +365,64 @@
     box-shadow: none;
   }
 }
+
+
+///////////////////////////////////////////////////////
+/// paragraph
+
+// the last paragraph wont have the mrgin
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+///////////////////////////////////////////////////////
+/// LIST 
+
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top:  var(--line);
+  border-bottom: var(--line);
+
+  display: flex;
+  flex-wrap: wrap; // will wrap to new lines, now element are side by side
+  &__item {
+    flex: 0 0 50%;
+    //width: 50%;
+    margin-bottom: .7rem;
+  }
+
+  &__item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    
+    margin-right: 7px;
+    //Older browsers
+    // background-image: url(../img/chevron-thin-right.svg); // we are calling directly on the svg file, to apply itself on each item, so we dont have to use 8 svg item on the html in index, like we have used for other cases
+    // background-size: cover;
+
+
+    //Newer broswers we use masks
+    //the square is still behind the mask, but the mask allows us to only see the sahpe of the svg we have selected
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover; // if we change size, the mask-size follows
+
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover; // if we change size, the mask-size follows
+  }
+}
+
+
+
+
+
+///////////////////////////////////////////////////////
+/// RECOMMEND

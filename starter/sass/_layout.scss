@@ -42,6 +42,7 @@
 } 
 
 .detail {
+  font-size: 1.4rem;
   display: flex; //its children will be side by side
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
@@ -49,7 +50,7 @@
 }
 
 .description {
-  font-size: 1.4rem;
+  // children inherit font-size
   background-color:  #fff;
   box-shadow: var(--shadow-light);
   padding: 3rem;
@@ -58,6 +59,12 @@
 }
 
 .user-reviews {
-  background-color: blue;
+  // children inherit font-size
+
+  //background-color: blue; // for testing purposes
   flex: 1; //we occupy the rest of the space within the parent 40% about
+  display: flex; // side by side
+  // but 
+  flex-direction: column; // so it gets fixed
+  align-items: center;
 }

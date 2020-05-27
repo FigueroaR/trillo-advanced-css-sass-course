@@ -10,8 +10,8 @@
   font-size: 1.4rem;
   height: 7rem;
   background-color: #fff; // means white
-  border-bottom: 1px solid var(--color-grey-light-2); // width type color
-
+  //border-bottom: 1px solid var(--color-grey-light-2); // width type color
+  border-bottom: var(--line); // check _base.scss for variable, same as line above
 
   display: flex; // we set the flex for the children to behave how we want it
   justify-content: space-between; // this equally divied the space between the children of this parent element, pushes all off them to an extreme of side
@@ -36,7 +36,28 @@
   background-color: #fff; // means white
 
   //testing
-  height: 80rem;
+  //height: 80rem;
 
   flex: 1; // so here we allow this element to grow as much as it can (full up its parent, so this comes after the side bar)
 } 
+
+.detail {
+  display: flex; //its children will be side by side
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  font-size: 1.4rem;
+  background-color: var(--white); // #fff
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  flex: 0 0 60%; // grow shrink occupancy
+  margin-right: 4.5rem;
+}
+
+.user-reviews {
+  background-color: blue;
+  flex: 1; //we occupy the rest of the space within the parent 40% about
+}

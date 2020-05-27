@@ -244,12 +244,8 @@
   &__photo {
     width: 100%;
     display: block;
-
   }
-
 }
-
-
 
 
 ///////////////////////////////////////////////////////
@@ -320,7 +316,6 @@
 
 ///////////////////////////////////////////////////////
 /// OVERVIEW Button inline
-
 
 .btn-inline {
   border: none;
@@ -531,4 +526,69 @@
     
     z-index: 1;
   }
+}
+
+///////////////////////////////////////////////////////
+/// CTA 
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+  // background-color: grey; /testing purposes
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: #fff;
+  position: relative;
+  overflow: hidden; // it will hide the second button, hide what is outside of the btn
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%;
+    
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%)
+  }
+
+
+  &:hover &__invisible {
+      top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite; // our animation for one sec and inifite times
+  }
+  
 }

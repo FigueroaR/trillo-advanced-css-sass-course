@@ -22,6 +22,13 @@
   display: flex; // we set the flex for the children to behave how we want it
   justify-content: space-between; // this equally divied the space between the children of this parent element, pushes all off them to an extreme of side
   align-items: center; // we ake the item cenetered on their x or y coordinate
+
+  @media only screen and (max-width: $bp-mini) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+    
+  }
 }
 
 .content {
@@ -62,6 +69,9 @@
     padding: 3rem;
   }
   
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -75,6 +85,11 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 2rem;
     margin-right: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
   
 }

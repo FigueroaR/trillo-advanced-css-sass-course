@@ -27,6 +27,8 @@
 $bp-large: 75em; //1200px/16px = 75em
 $bp-medium-large: 68.75em;  // 1100 / 16 = 68.75em
 $bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-mini: 31.25em; //500px   500px/ 16px(broswer default) = 31.25em
 
 * {
   margin: 0;
